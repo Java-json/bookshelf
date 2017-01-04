@@ -5,7 +5,6 @@ var fs = require('fs');
 /* GET home page. */
 exports.home = function(req,res,next){
 	res.render("home",{msg:""});
-    next();
 };
 
 exports.add = function(req, res, next){
