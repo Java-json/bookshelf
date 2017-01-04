@@ -1,0 +1,182 @@
+<div class="header navbar-fixed-top">
+	<div class="col-xs-12">
+		<div class="col-xs-3 text-left" ng-click="showVolume()"><span id="span_volume_style" class="fa fa-volume-down"></span></div>
+		<div class="col-xs-6 text-center">
+			QCPR练习中
+		</div>
+		<div class="col-xs-3 text-right">
+			<img style="margin-left:15px;" ng-src="{{wifiStatus}}"/>
+		</div>
+	</div>
+	<div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12 header-footer" >
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><img style="width:30px;height:30px;margin-top:10px" class="img-responsive" src="images/icon_user_photo.png"/></div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">{{userCnName}}</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">{{robotName}}</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">{{examTime}}</div>
+	</div>
+</div>
+<div class="container clear-padding" style="padding-top:100px;background-color: #f3f3f3;">
+	<div class="row" style="background-color:#fff;margin:0px 2px 0 2px;height:230px;">
+		<div class="col-lg-3 col-xs-3 col-sm-3 col-md-3 text-center " style="height:225px;padding-top:60px">
+			<!-- <div id="light" class="light-container">
+				<div id="press_5" class="press-yellow">
+				</div>
+				<div id="press_10" class="press-yellow">
+				</div>
+				<div id="press_15" class="press-yellow">
+				</div>
+				<div id="press_20" class="press-yellow">
+				</div>
+				<div id="press_25" class="press-yellow">
+				</div>
+				<div id="press_30" class="press-yellow">
+				</div>
+				<div id="press_35" class="press-yellow">
+				</div>
+				<div id="press_40" class="press-yellow">
+				</div>
+				<div id="press_45" class="press-yellow">
+				</div>
+				<div id="press_50" class="press-yellow">
+				</div>
+				<div id="press_55" class="press-green">
+				</div>
+				<div id="press_60" class="press-green">
+				</div>
+				<div id="press_65" class="press-green">
+				</div>
+				<div id="press_70" class="press-green">
+				</div>
+				<div id="press_75" class="press-green">
+				</div>
+				<div id="press_80" class="press-red">
+				</div>
+				<div id="press_85" class="press-red">
+				</div>
+				<div id="press_90" class="press-red">
+				</div>
+				<div id="press_95" class="press-red">
+				</div>
+				<div id="press_100" class="press-red">
+				</div>
+				<div id="press_105" class="press-red">
+				</div>
+			</div> -->
+			<span id="span_train_press" class="w-view-220" style="background-color:#eaeaea;">
+				<img style="width:50%;height:50%" src="images/train_press.png"/>
+			</span><br/>
+			<span id="span_press_num" style="color:#E74C20;font-size:25px">0</span><span style="font-size:12px;color:#ababab">次</span><br/>
+			<span id="span_press_depth" style="color:#E74C20;font-size:25px">0</span><span style="font-size:12px;color:#ababab">mm</span>
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 img-content" style="padding:20px 0px;">
+			<div id="div_press_position" style="margin-bottom:5px;background-color:#969596;border-radius:12px;">
+				<img src="images/train_monitor_press_position.png"/>
+			</div>
+			<div class="cpr-monitor-loop">
+				<div id="span_view_5" class="cpr-loop-top" style="background-color:#969596;border-radius:22px;">
+					<img src="images/cpr_monitor_c.png"/>
+				</div>
+				<div class="clearfix cpr-loop-medium">
+					<div><img style="float:right;" src="images/icon_step_rt.png"/></div>
+					<div id="div_loop_num" class="text-center cpr-loop-medium-message">0</div>
+					<div><img src="images/icon_step_rb.png"/></div>
+				</div>
+				<div class="clearfix cpr-loop-bottom">
+					<div class="cpr-loop-bottom-container">
+						<div id="span_view_8" class="div-left" style="background-color:#969596;border-radius:22px;"><img src="images/cpr_monitor_b.png"/></div>
+						<div class="text-center div-medium"><img src="images/icon_setp_left.png"/></div>
+						<div id="span_view_7" class="div-right" style="background-color:#969596;border-radius:22px;"><img src="images/cpr_monitor_a.png"/></div>
+						<div id="div_tooth" style="position:absolute;left:137px;top:10px;background-color:#969596;border-radius:12px;"><img src="images/train_monitor_tooth.png"/></div>
+					</div>
+				</div>
+			</div>
+			<div id="div_airway" style="position:relative;left:44px;top:5px;background-color:#969596;border-radius:12px;">
+				<img  src="images/train_monitor_airway.png"/>
+			</div>
+		</div>
+		<div class="col-lg-3 col-xs-3 col-sm-3 col-md-3 text-center" style="height:225px;padding-top:60px">
+			<!-- <div id="light" class="light-container">
+				<div id="breath_2100" class="press-red">
+				</div>
+				<div id="breath_2000" class="press-red">
+				</div>
+				<div id="breath_1900" class="press-red">
+				</div>
+				<div id="breath_1800" class="press-red">
+				</div>
+				<div id="breath_1700" class="press-red">
+				</div>
+				<div id="breath_1600" class="press-red">
+				</div>
+				<div id="breath_1500" class="press-green">
+				</div>
+				<div id="breath_1400" class="press-green">
+				</div>
+				<div id="breath_1300" class="press-green">
+				</div>
+				<div id="breath_1200" class="press-green">
+				</div>
+				<div id="breath_1100" class="press-green">
+				</div>
+				<div id="breath_1000" class="press-green">
+				</div>
+				<div id="breath_900" class="press-yellow">
+				</div>
+				<div id="breath_800" class="press-yellow">
+				</div>
+				<div id="breath_700" class="press-yellow">
+				</div>
+				<div id="breath_600" class="press-yellow">
+				</div>
+				<div id="breath_500" class="press-yellow">
+				</div>
+				<div id="breath_400" class="press-yellow">
+				</div>
+				<div id="breath_300" class="press-yellow">
+				</div>
+				<div id="breath_200" class="press-yellow">
+				</div>
+				<div id="breath_100" class="press-yellow">
+				</div>
+			</div> -->
+			<span id="span_train_breath" class="w-view-220" style="background-color:#eaeaea;">
+				<img style="width:50%;height:50%" src="images/train_breath.png"/>
+			</span><br/>
+			<span id="span_breath_num" style="color:#43AB38;font-size:25px">0</span><span style="font-size:12px;color:#ababab">次</span><br/>
+			<span id="span_breath" style="color:#43AB38;font-size:25px">0</span><span style="font-size:12px;color:#ababab">ml</span>
+		</div>
+	</div>
+
+	<div class="practice-monitor-btngroup clearfix" style="margin-top:30px;">
+		<div class="col-xs-4 col-sm-4 col-md-4 ">
+			<button class="btn btn-primary btn-lg btn-block" ng-click="reset()">重置</button>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 ">
+			<button id="btn_start_pause" class="btn btn-primary btn-lg btn-block" id="btn_pause" ng-click="pause()">暂停</button>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4">
+			<button class="btn btn-primary btn-lg btn-block" ng-click="finish()">完成</button>
+		</div>
+		<div class="hide col-xs-12 col-sm-12 col-md-12">
+			<button class="btn btn-default btn-lg btn-block" ng-click="exit()">退出</button>
+		</div>
+	</div>
+	
+	<div id="modalDialogs" class="modal fade md-trigger" data-modal="md-fade-in-scale-up"
+        	tabindex="-1" role="dialog" aria-labelledby="modalLabel" data-keyboard="true"
+        	data-backdrop="true" aria-hidden="true">
+		<div id="modalBox" class="modal-dialog" style="width:95%">
+			<div class="modal-content clearfix">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-top:15px;text-align:right;">
+					<label for="points">音量调节:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding:10px 0;">
+				 	<input ng-touchEnd="getVolume()" type="range" id="input_volume" name="points" id="points" value="3" min="0" max="5">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="padding-top:15px">
+					{{volume}}
+				</div>
+			</div>
+    	</div>
+	</div>
+</div>

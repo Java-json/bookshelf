@@ -1,0 +1,19 @@
+<center>
+<table class="table" border="2" cellspacing="1" style="color:red;border:2px">
+	<tr><td>ID</td><td>头像</td><td>姓名</td><td>年龄</td><td>证件号码</td><td>操作</td></tr>
+	<% for(var i in rows ){ %>
+		<tr>
+			<td><%= rows[i].id %></td>
+			<td><img src="<%= rows[i].user_img %>" width="60px" height="80px"/></td>
+			<td><%= rows[i].user_cn_name %></td>
+			<td><%= rows[i].user_age %></td>
+			<td><%= rows[i].user_idcard %></td>
+			<td>
+				<a href="/del<%= rows[i].id %>">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="/edit<%= rows[i].id %>">修改</a>
+			</td>
+		</tr>
+	<% } %>	
+</table>
+	<div><a href="/">新增用户</a></div>
+</center>

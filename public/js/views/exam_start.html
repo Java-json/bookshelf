@@ -1,0 +1,27 @@
+<div class="header navbar-fixed-top">
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	
+   	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">
+		考试
+	</div>
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" ng-click="redirectMain()">
+		<span class="fa fa-home fa-lg"></span>
+   	</div>
+</div>
+<div class="container clear-padding" style="height:100%;padding-top:50px;background-color:#fff;">
+	<div class="practice-start-logo clearfix">
+		<div class="col-xs-12 col-sm-12 col-md-12 clear-padding">
+			<img class="img-responsive" src ="images/exam_start.png" />
+		</div>
+	</div>
+	<div class="text-center" style="font-size:18px;">请至<span style="color:red;">{{robotName}}</span>号模拟人开始考试！</div>
+	<div class="practice-start-btngroup clearfix">
+		<div class="form-group">
+			<input type="button" id="btn_start_exam" class="btn btn-primary btn-block btn-lg" ng-click="start()" value="开始考试">
+		</div>
+		<div class="form-group">
+			<input type="button" class="btn btn-default btn-block btn-lg" ng-click="exit()" value="退出">
+		</div>
+	</div>
+</div>
