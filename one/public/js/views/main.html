@@ -1,0 +1,26 @@
+<div class="container main-bg">
+	<div class="row main-logo">
+       <span><img class="img-main-logo" src="images/icon_logo_bg.png"/></span>
+       <span id="span_logout" ng-click="exit()">
+       		<span style="position: absolute;top:20px;left:60%;color:#fff">连接模拟人成功</span><span style="position: absolute;top:15px;left:90%;opacity:0.7;color:#fff;" class="fa fa-sign-out fa-2x"></span>
+       </span>
+    </div>
+    <div id="div_main" class="row" style="background-color:#fff">
+        <div class="hide col-lg-6 col-md-6 col-sm-6 col-xs-6 main-menu clear-padding text-center" style="border-right:solid 2px #f3f3f3;border-bottom:solid 2px #f3f3f3" ng-click="redirectLogin(1)">
+        	<div class="row w-view-120"><img class="img-menu" src="images/icon_exam.png"/></div>
+        	<div style="margin-top:5px;color:#999;">CPR考试</div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-menu clear-padding text-center" style="border-bottom:solid 2px #f3f3f3" ng-click="redirectLogin(2)">
+        	<div class="w-view-130"><img class="img-menu" src="images/icon_training_cpr.png"/></div>
+        	<div style="margin-top:5px;color:#999;">CPR练习</div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-menu clear-padding text-center" style="border-right:solid 2px #f3f3f3;" ng-click="redirectLogin(3)">
+        	<div class="w-view-140"><img class="img-menu" src="images/icon_training_qcpr.png"/></div>
+        	<div style="margin-top:5px;color:#999;">QCPR练习</div>
+        </div>
+        <div class="hide col-lg-6 col-md-6 col-sm-6 col-xs-6 main-menu clear-padding text-center" ng-click="redirectLogin(4)">
+        	<div class="w-view-150"><img class="img-menu" src="images/icon_score_seach.png"/></div>
+        	<div style="margin-top:5px;color:#999;">成绩查询</div>
+        </div>
+    </div>
+</div>

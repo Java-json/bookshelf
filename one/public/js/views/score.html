@@ -1,0 +1,158 @@
+<!-- header -->
+<div class="header navbar-fixed-top">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-click="redirectExamList()">
+		<span class="fa fa-angle-left fa-lg" id="span_back"></span>
+   	</div>
+   	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center">
+		成绩统计
+   	</div>
+   	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		
+   	</div>
+</div>
+<!-- container -->
+<div class="container clear-padding" style="background-color:#f3f3f3; width:100%;padding-top:50px;">
+	<div class="score">
+		<div id="div_total_score" class="row" style="background-color:#fff;padding-top:10px;padding-bottom:10px;margin:0px 1px 0 1px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	           	<span class="icon-total-score-left">得分:</span>
+	           	<span id="span_score_total" class="icon-total-score-right">{{totalScore}}</span>
+			</div>
+		</div>
+		<div id="div_score_detail" class="row" style="background-color:#fff;margin:2px 1px 0 1px;">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="确认环境"><img class="img_score" src="images/icon_score_safe.png" /></span><span class="title-font">确认环境</span>
+				</div>
+				<div id="span_score_safe" class="score-font">{{safeScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="确认意识"><img class="img_score" src="images/icon_score_know.png" /></span><span class="title-font">确认意识</span>
+				</div>
+				<div id="span_score_know" class="score-font">{{knowScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="呼吸脉搏"><img class="img_score" src="images/icon_score_pause.png" /></span><span class="title-font">呼吸脉搏</span>
+				</div>
+				<div id="span_score_pause" class="score-font">{{pulseScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="呼叫求救"><img class="img_score" src="images/icon_score_help.png" /></span><span class="title-font">呼叫求救</span>
+				</div>
+				<div id="span_score_help" class="score-font">{{helpScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="安置体位"><img class="img_score" src="images/icon_score_place.png" /></span><span class="title-font">安置体位</span>
+				</div>
+				<div id="span_score_place" class="score-font">{{placeScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="按压姿势"><img class="img_score" src="images/icon_score_pressplace.png" /></span><span class="title-font">按压姿势</span>
+				</div>
+				<div id="span_score_presspose" class="score-font">{{pressPoseScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="有无假牙"><img class="img_score" src="images/icon_score_tooth.png" /></span><span class="title-font">有无假牙</span>
+				</div>
+				<div id="span_score_tooth" class="score-font">{{toothScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="开放气道"><img class="img_score" src="images/icon_score_airway.png" /></span><span class="title-font">开放气道</span>
+				</div>
+				<div id="span_score_airway" class="score-font">{{airwayScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="完成评估"><img class="img_score" src="images/icon_score_assess.png" /></span><span class="title-font">完成评估</span>
+				</div>
+				<div id="span_score_assess" class="score-font">{{assessScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="按压中断"><img class="img_score" src="images/icon_score_press_out.png" /></span><span class="title-font">按压中断</span>
+				</div>
+				<div id="span_score_pressout" class="score-font">{{ccScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="人文关怀"><img class="img_score" src="images/icon_score_care.png" /></span><span class="title-font">人文关怀</span>
+				</div>
+				<div id="span_score_care" class="score-font">{{careScore}}</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xs-border text-center">
+				<div style="float:left;width:65%">
+					<span class="w-view-160" title="考试时间"><img class="img_score" src="images/icon_score_examtime.png" /></span><span class="title-font">考试时间</span>
+				</div>
+				<div id="span_score_examtime" class="score-font">{{timeScore}}</div>
+			</div>
+		</div>
+		<div class="row" id="div_press" style="background-color:#fff;margin:1px 1px 0 1px">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+	            <div style="float:left;width:65%">
+	            	<span class="w-view-160" title="胸外按压"><img class="img_score" src="images/icon_score_press.png" /></span><span class="title-font">胸外按压</span>
+	            </div>
+	            <div id="span_score_press" class="score-font">{{pressScore}}</div>
+			</div>
+		</div>
+		<div class="row" id="div_press_chart" style="background-color:#fff;margin:0 1px 0 1px;padding-top:10px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="w-view-180">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left" style="padding-top:10px">
+						<input id="press_true_lv" type="hidden" ng-model="pressTrueRate">
+						<canvas id="canvas_press_rate" width="85px" height="85px"></canvas>  
+						<span style="position: absolute;left: 28px; top:90px; color:#c6c6c6; font-size:10px;">按压正确率</span>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<span id="press_back_true_rate" class="icon-press-back">{{pressBackTrueRate}}%</span>
+						<span class="icon-press-back-rect" style="position: absolute;left: 20px; top:30px;"></span>
+						<span id="press_deep_true_rate" class="icon-press-back" style="position: absolute;left: 10px; top:60px;">{{pressDeepTrueRate}}%</span>
+						<span style="position: absolute;left: 15px; top:-20px; color:#c6c6c6; font-size:10px;">回弹正确率</span>
+						<span style="position: absolute;left: 15px; top:90px; color:#c6c6c6; font-size:10px;">深度正确率</span>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left" style="padding-top:10px">
+						<input id="press_speed_rate" type="hidden" ng-model="pressSpeedTrueRate">
+						<canvas id="canvas_speed_rate" width="85px" height="85px"></canvas> 
+						<span style="position: absolute;left: 15px; top:90px; color:#c6c6c6; font-size:10px;">按压速率(次/分)</span>
+					</div>
+				</div>
+			</div>
+	   	</div>
+	   	<div class="row" id="div_breath" style="background-color:#fff;margin:2px 1px 0 1px">
+	   		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+	   			<div style="float:left;width:65%">
+	            	<span class="w-view-160" title="人工呼吸"><img class="img_score" src="images/icon_score_breath.png" /></span><span class="title-font">人工呼吸</span>
+	            </div>
+	            <div id="span_score_breath" class="score-font">{{breathScore}}</div>
+			</div>
+	   	</div>
+	   	<div class="row" id="div_breath_chart" style="background-color:#fff;margin:0 1px 0 1px">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	       		<span class="w-view-190 text-left">
+	       			<input id="breath_true_lv" type="hidden" ng-model="breathTrueRate">
+					<div id="div_datail_breath_true"></div>
+					<canvas id="canvas_breath_rate" width="85px" height="85px"></canvas> 
+					<span style="position: absolute;left: 28px; top:95px; color:#c6c6c6; font-size:10px;">吹气正确率</span>
+	       		</span>
+	        </div>
+	   	</div>
+	</div>
+	<!-- footer 不通栏 -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="btn_group" style="margin-top: 15px;">
+		<div class="form-group" id="btn_back">
+			<input type="button"  class="btn btn-primary btn-block btn-lg" ng-click="redirectExamList()" value="返回列表">
+		</div>
+		<div class="form-group" id="btn_home">
+			<input type="button"  class="btn btn-primary btn-block btn-lg" ng-click="redirectMain()" value="返回主页">
+		</div>
+		<div class="hide form-group" id="btn_exit">
+			<input type="button"  class="btn btn-default btn-block btn-lg" ng-click="exit()" value="退出">
+		</div>
+	</div>
+</div>

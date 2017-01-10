@@ -1,0 +1,667 @@
+@charset "UTF-8";
+
+.modal-header .close {
+    margin-top: -8px;
+}
+.close {
+    font-size: 35px;
+}
+
+
+.container{
+	height:100% !important;
+}
+
+
+.message {
+	display: block;
+	padding: 15px 15px 15px 50px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+.warning {
+	background: #FAFAFA url("../images/warning.png") no-repeat 10px center;
+	border: 1px solid #FAFAFA;
+    color: #0D0D0D;
+}
+.info {
+	background: #FAFAFA url("../images/information.png") no-repeat 10px center;
+	border: 1px solid #FAFAFA;
+    color: #0D0D0D;
+}
+.success{
+	background: #FAFAFA url("../images/success.png") no-repeat 10px center;
+	border: 1px solid #FAFAFA;
+    color: #0D0D0D;
+}
+.danger {
+	background: #FAFAFA url("../images/error.png") no-repeat 10px center;
+	border: 1px solid #FAFAFA;
+    color: #0D0D0D;
+}
+.welcome {
+	background: #FAFAFA url("../images/welcome.png") no-repeat 10px center;
+	border: 1px solid #FAFAFA;
+    color: #0D0D0D;
+}
+
+.data-loading
+{
+    position:absolute;z-index:91000; top:40%; left:40%; overflow:hidden;
+    background:url("../images/loading.gif") no-repeat 0px 0px;width:128px; height:128px;
+}
+
+body,html{
+	height:100% !important;
+	background-color:#fff !important;
+}
+
+body {
+	padding:0;
+    margin:0;
+    font-family: "微软雅黑","Helvetica Neue",STHeiTi, sans-serif,Microsoft Yahei,SimSun,Helvetica;
+}
+
+body {
+	padding-top:0;
+}
+
+.form-control {
+  height: 40px;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #faffbd;
+  opacity: 1;
+  border: 1px solid #d2d3d6;
+  height: 34px;
+}
+
+.form-control:focus {
+  border-color: #00c9fa;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(77, 77, 77, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(77, 77, 77, 0.6);
+}
+
+.text-input{
+	border-radius:5px;
+}
+
+.btn-primary{
+	border-radius:5px;
+	background-color:#42b1f0;
+}
+
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:visited{
+	background-color:#1ea1eb !important;
+}
+
+.btn-default{
+	border-radius:5px;
+	background-color:#e8e8e8;
+	color:#999;
+}
+
+.btn-default:hover,.btn-default:active,.btn-default:focus,.btn-default:visited{
+	border-radius:5px;
+	background-color:#dcdcdc;
+	color:#999;
+}
+
+.btn-regist{
+	border-radius:5px;
+	background-color:#3ecbcd;
+	color:#fff;
+}
+
+.btn-regist:hover,.btn-regist:active,.btn-regist:focus,.btn-regist:visited{
+	border-radius:5px;
+	background-color:#01c1c4;
+	color:#fff;
+}
+
+.main-bg {
+	background-color: #e6e7e8;
+}
+
+.main-logo {
+	text-align: center;
+}
+
+.main-menu {
+	background-color: #fff;
+	height: 165px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.header {
+	height: 50px;
+	background-color: #3e66cd;
+	color: #fff;
+	font-size: 22px;
+	line-height: 50px;
+}
+
+.footer {
+	line-height: 20px;
+    color: #d0d0d0;
+	position:absolute;bottom:0px;left:0px;width:100%
+}
+
+/* 模拟人编号 */
+.icon-man-index {
+    width: 22px;
+    height: 22px;
+    line-height: 18px;
+    font-size: 12px;
+    border-radius: 500px;
+    background-color: #0cc3ab;
+    color: #fff;
+    text-align: center;
+    border: #0cc3ab solid 1px;
+    display: inline-block;
+}
+
+/* 成绩统计 */
+.icon-total-score-left {
+    font-size: 18px;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    padding: 3px;
+}
+.icon-total-score-right {
+    font-size: 32px;
+    color: #0cc2aa;
+    line-height: 20px;
+    text-align: left;
+    float: left;
+    padding: 3px;
+}
+
+.w-view-120 {
+    background-color: #94d201;
+}
+
+.w-view-130 {
+    background-color: #32d2ea;
+}
+
+.w-view-140 {
+    background-color: #f7c028;
+}
+
+.w-view-150 {
+    background-color: #f35959;
+}
+
+.w-view-120,.w-view-130,.w-view-140,.w-view-150{
+	height: 90px; 
+    width: 90px; 
+    line-height: 80px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 500px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.w-view-160 {
+    height: 30px; 
+    width: 100%;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.w-view-170 {
+    width: 100%;
+    height: 50px; 
+    line-height: 45px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.w-view-180 {
+	width: 100%;
+    height: 140px; 
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    padding-top:15px;
+}
+
+.w-view-190 {
+    width: 100%;
+    height: 140px; 
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.w-view-210 {
+    /* font-size: 30px; */
+    width:28px;
+    height:28px;
+    text-align: center;
+    display: inline-block;
+    background-color:#969596;
+    border-radius: 14px;
+    border:0px;
+    padding:0px;
+    margin:0px;
+}
+
+.w-view-220 {
+    width:60px;
+    height:60px;
+    line-height:60px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+
+.col-xs-border {
+	border-top:0px;
+	border-bottom:1px solid #f3f3f3;
+	border-left:0px;
+	border-right:1px solid #f3f3f3;
+}
+
+.score-font{
+	float:right;
+	width:30%;
+	line-height:250%;
+	font-size:30px;
+	color: #ababab;
+}
+
+.score-img-font{
+	float:right;
+	width:30%;
+	line-height:225%;
+	font-size:30px;
+	color: #ababab;
+}
+
+/* 按压回弹正确率 */
+.icon-press-back {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 500px;
+    background-color: #fff;
+    color: #ababab;
+    text-align: center;
+    border: #3e66cd solid 1px;
+    display: inline-block;
+}
+
+/* 按压回弹正确率-矩形 */
+.icon-press-back-rect {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(#c6d3f7,#3e66cd);
+	background: -moz-linear-gradient(top, #c6d3f7 0%, #3e66cd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #c6d3f7 0%,#3e66cd 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #c6d3f7 0%,#3e66cd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6d3f7', endColorstr='#3e66cd',GradientType=0 );
+	
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.press-true-chat {
+	width: 70px;
+    height: 70px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 500px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border: #3e66cd solid 10px;
+    display: inline-block;
+}
+
+#div_datail_press_true canvas,#div_datail_breath_true canvas {
+	width: 65px;
+	height:65px;
+}
+
+/* 拨号盘样式 */
+.phone-num-col {
+	border-right:solid 1px #d2d3d6;
+	border-bottom:solid 1px #d2d3d6;
+	height:50px;
+	line-height:50px;
+	background-color: #fff;
+	font-size:20px;
+	padding:0px;
+}
+
+.phone-num-col:active{
+	background-color: #41b1f0;
+	color: #fff;
+}
+
+/* 拨号输入框样式 */
+.input-text-phone {
+	 font-size:45px;
+	 line-height:130px;
+	 text-align:right;
+	 padding-right:30px;
+}
+
+.light-container{
+    display: inline-block;
+}
+.press-red{
+	border: 1px solid #a0a0a0;/*ff0000*/
+	background-color: #CE1104;
+	width:40px;
+	height:15px;
+}
+.press-yellow{
+	border: 1px solid #a0a0a0;/*ffff00*/
+	background-color: #FFD600;
+	width:40px;
+	height:15px;
+}
+.press-green{
+	border: 1px solid #a0a0a0;/*3bff00*/
+	background-color: #64DD17;
+	width:40px;
+	height:15px;
+}
+
+.exam-start-logo{
+	width:100%;
+} 
+
+.exam-start-options{
+	margin-top:50px;
+}
+
+.header-footer{
+	width:100%;
+	height:50px;
+	background-color: #3F66CD;
+	line-height:50px;
+	color:#fff;
+	font-size:18px;
+	padding:0;
+	margin:0
+}
+
+.exam-monitor-container{
+	background-color: #f3f3f3;
+	padding:0;
+	margin:0;
+	height:100%;
+}
+
+.monitor-option{
+	padding:0;
+}
+
+.monitor-btn{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.monitor-option-img{
+	float:left;
+	margin-top:7.5px;
+	margin-left:10px;
+}
+.monitor-option-img img{
+	height:60px;
+	width:60px;
+}
+.monitor-option-message{
+	line-height:75px;
+	color:#333333
+}
+.monitor-option-message div:first-child{
+	float:left;
+	margin-left:5px;
+}
+.monitor-option-message div:last-child{
+	float:right;
+	margin-right:25px;
+}
+
+.dot-red,.dot-green{
+	border-radius:500px;
+	width:15px;
+	height:15px;
+	margin-top:30px;
+}
+
+.dot-green{
+	background-color: green;
+}
+
+.dot-red{
+	background-color: red;
+}
+.confirmbtn{
+	background-color:#fff;
+}
+.confirmbtn:focus{
+	text-decoration: none;
+}
+/* cpr训练页面样式  开始 */
+.practice-start-logo img{
+	width:100%;
+	padding:20px 0px;
+	margin:0 auto;
+}
+.practice-start-btngroup{
+	margin-top:50px;
+}
+.practice-start-btngroup div,.practice-monitor-btngroup div{
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:20px;
+}
+.practice-monitor-option{
+	margin-bottom:10px;
+}
+.option-safe{
+	background-color: #42e1af;
+}
+.option-help{
+	background-color: #3ecbcd;
+}
+.practice-monitor-bar div {
+	padding-left:0;
+	padding-right:0;
+	background-color: #fff;
+}
+.practice-border-right{
+	border-right:1px solid #f3f3f3;
+}
+.practice-border-left{
+	border-left:1px solid #f3f3f3;
+}
+.practice-border-bottom{
+	border-bottom:1px solid #f3f3f3;
+}
+.practice-border-top{
+	border-top:1px solid #f3f3f3;
+}
+
+.img-content{
+	padding:10px 0px;
+}
+.img-content div{
+	position:relative;
+	width:24px;
+	height:24px;
+	margin:0 auto;
+}
+.img-content img{
+	width:24px;
+	height:24px;
+}
+.press-icon,.breath-icon{
+	width:12px !important;
+	height:12px !important;
+	float:left ;
+	background-color:#fff !important;
+}
+.breath-icon img,.press-icon img{
+	vertical-align: top;
+	width:12px !important;
+	height:12px !important;
+}
+.breath-times,.press-times{
+	width:28px !important;
+	height:12px !important;
+	float:left;
+	background-color:#fff !important;
+	margin-left:4px !important;
+	font-size:8pt !important;
+	line-height:17px;
+}
+.breath-message,.press-message{
+	width:24px !important;
+	height:12px !important;
+	float:left;
+	background-color:#fff !important;
+	margin-left:4px !important;
+	margin-top:2px !important;
+	font-size:10px !important;
+	line-height:12px;
+}
+
+.cpr-mintor-light{
+	margin:0 auto !important;
+	margin-top:5px !important;
+	width:40px !important;
+	height:315px !important;
+}
+.cpr-monitor-loop{
+	width:100% !important;
+	height:135px !important;
+	margin:0 !important;
+	background-color: #fff !important;
+}
+
+.cpr-loop-top{
+	width:44px !important;
+	height:44px !important;
+}
+.cpr-loop-top img{
+	width:44px !important;
+	height:44px !important;
+}
+
+.cpr-loop-medium{
+	width:72px !important;
+	height:44px !important;
+	margin-top:3px !important;
+}
+.cpr-loop-medium div{
+	height:44px !important;
+	float:left !important;
+	background-color: #fff !important;
+}
+.cpr-loop-medium img{
+	margin-top:12px !important;
+	width:20px !important;
+	height:17px !important;
+}
+.cpr-loop-medium-message{
+	line-height:60px !important;
+	font-size:30px !important;
+	color:#3bab3d;
+}
+
+.cpr-loop-bottom{
+	background-color: #fff !important;
+	width:100% !important;
+	margin:0 0 !important;
+	height:44px !important;
+}
+.cpr-loop-bottom-container{
+	width:132px !important;
+	height:44px !important;
+	margin:0 auto !important;
+	background-color:#fff !important;
+	position:relative !important;
+}
+.div-left{
+	margin-right:10px !important;
+	float:left !important;
+	width:44px !important;
+	height:44px !important;
+}
+.div-left img,.div-right img{
+	width:44px !important;
+	height:44px !important;
+}
+
+.div-right{
+	margin-left:10px !important;
+	float:left !important;
+	width:44px !important;
+	height:44px !important;
+}
+
+.div-medium{
+	width:24px !important;
+	height:44px !important;
+	float:left !important;
+	background-color: #fff !important;
+}
+.div-medium img{
+	margin-top:10px !important;
+	width:20px !important;
+	height:17px !important;
+}
+
+/* cpr训练页面样式  结束*/
+
+.clear-padding {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.splash-start {
+	background-size:100% 100%;
+	background: #1552d2 url("../images/splash.png") no-repeat center;
+}
+
+.splash-finish {
+	background: #f7f8fa;
+}
+
+.volume-btn{
+	width:40px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:5px;
+	font-size:16px;
+}
+
