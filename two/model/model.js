@@ -1,4 +1,4 @@
-var bookshelf = require("../dao/db");
+var bookshelf = require("../datasourse/db");
 
 var User = bookshelf.Model.extend({
     tableName: "user",

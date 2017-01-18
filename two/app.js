@@ -5,8 +5,6 @@ var ejs = require('ejs');
 var bodyParser = require("body-parser");
 var partials = require('express-partials');
 
-var router =  require("./routes/route");
-
 var app = express();
 
 app.engine('ejs', ejs.__express); //设置ejs引擎
@@ -26,19 +24,7 @@ app.use(require('express-formidable')({
     keepExtensions: true// 保留后缀
 }));
 
-/**
- * get请求
- */
-app.get("/",router.home);
-app.get("/list",router.list);
-app.get("/del:id",router.del);
-app.get("/edit:id",router.edit);
-
-/**
-* post请求
-*/
-app.post("/add", router.add);
-app.post("/update", router.update);
+require('./routes/routes')(app);
 
 /**
  * 捕获未处理异常
@@ -53,8 +39,6 @@ process.on('uncaughtException', function (err) {
 /**
  * 监听端口
  */
-app.listen(8888,function(){
+app.listen(1111,function(){
 	console.log("run....");
 });
-
-module.exports = app;

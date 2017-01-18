@@ -1,34 +1,23 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'E:\\Softwareinstall\\nodejs\\node.exe',
 1 verbose cli   'E:\\Softwareinstall\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   'mysql-queues;' ]
+1 verbose cli   'install' ]
 2 info using npm@2.15.8
 3 info using node@v4.4.7
-4 verbose install initial load of D:\nodejsSpace\package.json
-5 verbose readDependencies loading dependencies from D:\nodejsSpace\package.json
-6 silly cache add args [ 'mysql-queues;', null ]
-7 verbose cache add spec mysql-queues;
-8 silly cache add parsed spec Result {
-8 silly cache add   raw: 'mysql-queues;',
-8 silly cache add   scope: null,
-8 silly cache add   name: null,
-8 silly cache add   rawSpec: 'mysql-queues;',
-8 silly cache add   spec: 'D:\\nodejsSpace\\mysql-queues;',
-8 silly cache add   type: 'local' }
-9 error addLocal Could not install D:\nodejsSpace\mysql-queues;
-10 verbose stack Error: ENOENT: no such file or directory, open 'D:\nodejsSpace\mysql-queues;'
-10 verbose stack     at Error (native)
-11 verbose cwd D:\nodejsSpace
-12 error Windows_NT 6.1.7601
-13 error argv "E:\\Softwareinstall\\nodejs\\node.exe" "E:\\Softwareinstall\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "mysql-queues;"
-14 error node v4.4.7
-15 error npm  v2.15.8
-16 error path D:\nodejsSpace\mysql-queues;
-17 error code ENOENT
-18 error errno -4058
-19 error syscall open
-20 error enoent ENOENT: no such file or directory, open 'D:\nodejsSpace\mysql-queues;'
-20 error enoent This is most likely not a problem with npm itself
-20 error enoent and is related to npm not being able to find a file.
-21 verbose exit [ -4058, true ]
+4 verbose readDependencies loading dependencies from D:\nodejsSpace\package.json
+5 error install Couldn't read dependencies
+6 verbose stack Error: ENOENT: no such file or directory, open 'D:\nodejsSpace\package.json'
+6 verbose stack     at Error (native)
+7 verbose cwd D:\nodejsSpace
+8 error Windows_NT 6.1.7601
+9 error argv "E:\\Softwareinstall\\nodejs\\node.exe" "E:\\Softwareinstall\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+10 error node v4.4.7
+11 error npm  v2.15.8
+12 error path D:\nodejsSpace\package.json
+13 error code ENOPACKAGEJSON
+14 error errno -4058
+15 error syscall open
+16 error package.json ENOENT: no such file or directory, open 'D:\nodejsSpace\package.json'
+16 error package.json This is most likely not a problem with npm itself.
+16 error package.json npm can't find a package.json file in your current directory.
+17 verbose exit [ -4058, true ]
